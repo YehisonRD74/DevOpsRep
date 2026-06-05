@@ -3,29 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <title>AutoMundo - Pasión por el Motor</title>
     <style>
-        /* Estilos básicos para centrar el texto y darle diseño */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        /* Reset de estilos básicos */
+        * {
             margin: 0;
-            background-color: #f4f4f9;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        h1 {
-            color: #2c3e50;
-            font-size: 4rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: #000000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e50914;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #e50914;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e50914;
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Imagen de fondo de Unsplash orientada a autos */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            color: #d1d1d1;
+            line-height: 1.5;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background-color: #e50914;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #b80710;
+            transform: scale(1.05);
+        }
+
+        /* Sección de Características */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 80px 20px;
+            background-color: #1e1e1e;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background-color: #2a2a2a;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 320px;
+            border-radius: 8px;
+            border-bottom: 4px solid #e50914;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #000000;
+            color: #555;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <h1>¡Hola Mundo!</h1>
+    <header>
+        <h1>AutoMundo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#vehiculos">Vehículos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Siente la Adrenalina</h2>
+        <p>Descubre las últimas novedades, reseñas y tecnologías del apasionante mundo del motor. Tu viaje hacia el vehículo perfecto comienza aquí.</p>
+        <a href="#vehiculos" class="btn">Explorar Catálogo</a>
+    </section>
+
+    <section class="features" id="servicios">
+        <div class="feature-card">
+            <h3>Potencia y Rendimiento</h3>
+            <p>Análisis detallados de los motores más eficientes y potentes del mercado actual para que tomes la mejor decisión.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Diseño Vanguardista</h3>
+            <p>Explora las líneas aerodinámicas, la innovación en chasis y los interiores de lujo de los últimos modelos.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Movilidad del Futuro</h3>
+            <p>Mantente al día con las últimas noticias sobre vehículos eléctricos, híbridos y conducción autónoma.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AutoMundo. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
