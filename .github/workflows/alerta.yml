@@ -1,0 +1,22 @@
+name: Enviar Notificacion a NTFY
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v3
+
+      - name: Enviar alerta a ntfy
+        run: |
+          curl \
+            -H "Title: ¡Nuevo código desplegado! 🚀" \
+            -H "Tags: white_check_mark, github" \
+            -d "Se ha subido un nuevo commit a la rama main del repositorio." \
+            https://ntfy.sh/devops-itla
